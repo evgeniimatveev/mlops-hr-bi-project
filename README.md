@@ -120,11 +120,10 @@ python scripts/export_views.py
 ```
 📸 Dashboard Preview
 
-📸 Dashboard Preview
-
-<p align="center"> <img src="tableau/screenshots
-/Dashboard 1.png" width="600"/> <br><em>Interactive Tableau Story with hiring trends</em> </p>
-
+<p align="center">
+  <img src="https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/screenshots/Dashboard%201.png?raw=true" width="600"/>
+  <br><em>Interactive Tableau Story with hiring trends</em>
+</p>
 
 
 - 🪄 What’s Next?

@@ -137,23 +137,7 @@ python scripts/export_views.py
 - 💰 Salary Trends	Salaries steadily increased since 2019
 - 🧮 Role Distribution	Marketing + DevOps dominate non-tech hires
 
-🧑‍💻 About the Author
-- This project is part of a portfolio series focused on:
 
-📊 Data Analytics & BI
-
-⚙️ MLOps & Python Automation
-
-🗃️ SQL + PostgreSQL Data Engineering
-
-🧠 Storytelling with Tableau
-
-🔗 Stay Connected
-GitHub Projects: Evgenii Matveev
-
-Portfolio & Resume: [SuperDataScience Link]
-
-Tableau Public: Coming soon
 
 - 🪄 What’s Next?
 - ✔️ Finish Tableau dashboard & Story (1 file with all insights)

@@ -1,0 +1,31 @@
+emp_id,emp_name,hire_date,salary,dept_name,position_name
+1,Alice Johnson,2019-02-10,72000,Human Resources,HR Manager
+2,Michael Smith,2020-06-11,68000,Human Resources,Recruiter
+3,Sarah Davis,2018-01-23,115000,Engineering,DevOps Engineer
+4,David Miller,2019-06-27,112000,Engineering,Software Engineer
+5,Emma Brown,2021-03-18,70000,Marketing,Marketing Analyst
+6,Daniel Lee,2020-10-02,69000,Marketing,Content Strategist
+7,Olivia Wilson,2018-07-27,119000,Sales,Sales Representative
+8,James Anderson,2019-12-11,96000,Sales,Sales Representative
+9,Sophia Martinez,2020-09-30,64000,Finance,Financial Analyst
+10,Liam Taylor,2016-04-20,100000,Finance,Controller
+11,Noah Moore,2015-12-06,60000,Engineering,Software Engineer
+12,Isabella Clark,2019-08-22,95000,Engineering,DevOps Engineer
+13,Ethan Lewis,2017-06-08,105000,Human Resources,HR Manager
+14,Mia Robinson,2020-01-15,72000,Human Resources,Recruiter
+15,Alexander Walker,2020-06-11,87000,Marketing,Content Strategist
+16,Charlotte Hall,2016-02-19,135000,Marketing,Marketing Analyst
+17,Benjamin Allen,2018-03-05,113000,Sales,Account Executive
+18,Amelia Young,2021-07-01,69000,Finance,Controller
+19,Logan Hernandez,2020-10-17,93000,Finance,Financial Analyst
+20,Harper King,2022-02-23,62000,Human Resources,Recruiter
+21,Elijah Wright,2018-12-09,117000,Engineering,DevOps Engineer
+22,Evelyn Scott,2019-06-05,70000,Marketing,Marketing Analyst
+23,Aiden Green,2018-01-17,66000,Marketing,Content Strategist
+24,Abigail Adams,2021-04-04,94000,Sales,Sales Representative
+25,Lucas Baker,2020-05-12,90000,Sales,Account Executive
+26,Ella Nelson,2020-03-11,85000,Finance,Financial Analyst
+27,Jackson Carter,2018-01-16,100000,Finance,Controller
+28,Emily Perez,2019-06-07,77000,Human Resources,HR Manager
+29,Jacob Roberts,2020-12-28,76000,Engineering,Software Engineer
+30,Luna Turner,2022-07-10,58000,Marketing,Marketing Analyst

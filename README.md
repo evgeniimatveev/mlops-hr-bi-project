@@ -28,6 +28,7 @@ It supports SQL-based queries and **automatically exports analytical views** int
 - 🔐 **dotenv** – secret and config management  
 
 ---
+- 🧠 **DBeaver** – SQL query testing, ERD design, and live view debugging
 
 ## 📁 Project Structure
 

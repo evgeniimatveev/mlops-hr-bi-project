@@ -136,3 +136,9 @@ python scripts/export_views.py
 - 📌 Add storytelling section + links once live
 
 - ⭐ Give the repo a star if you'd use this as a template for BI storytelling projects
+
+
+## 📢 Stay Connected!  
+💻 **GitHub Repository:** [Evgenii Matveev](https://github.com/evgeniimatveev)  
+🌐 **Portfolio:** [Data Science Portfolio](https://www.datascienceportfol.io/evgeniimatveevusa)  
+📌 **LinkedIn:** [Evgenii Matveev](https://www.linkedin.com/in/evgenii-matveev-510926276/)  

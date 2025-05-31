@@ -85,27 +85,22 @@ These are perfect for quick reviews, presentations, or adding to your job interv
 
 - Tableau dashboards visualize key metrics and patterns
 
+- 📌 Example Views
 ```bash
-📌 Example Views
-sql
-Copy
-Edit
 -- View: Average salary by department
+
 SELECT dept_name, AVG(salary) AS avg_salary
 FROM employee_full_info
 GROUP BY dept_name;
 
 -- View: Employees with latest salary change
+
 SELECT emp_id, emp_name, MAX(changed_at) AS last_changed_at
 FROM employee_salary_history
 GROUP BY emp_id, emp_name;
 ```
-
-```bash
 💾 .env Setup
-env
-Copy
-Edit
+```bash
 DB_NAME=hr_bi
 DB_USER=postgres
 DB_PASSWORD=your_password
@@ -113,29 +108,22 @@ DB_HOST=localhost
 DB_PORT=5432
 
 ```
-```bash
 🚀 How to Run
-bash
-Copy
-Edit
+```bash
 # Activate environment
+
 conda activate mlops_hr_bi_env
 
 # Export all views into /data/
+
 python scripts/export_views.py
 ```
-```bash
 📸 Dashboard Preview
-<p align="center"> <img src="tableau/screenshots/story_overview.png" width="600"/> <br><em>Interactive Tableau Story with hiring trends</em> </p>
 
-```
+📸 Dashboard Preview
 
-- 🧠 Key Insights (Examples)
-- Metric	Insight
-- 📌 Top Department	Engineering shows highest avg salary
-- 👥 Hiring Timeline	2021 had highest number of new hires
-- 💰 Salary Trends	Salaries steadily increased since 2019
-- 🧮 Role Distribution	Marketing + DevOps dominate non-tech hires
+<p align="center"> <img src="tableau/screenshots
+/Dashboard 1.png" width="600"/> <br><em>Interactive Tableau Story with hiring trends</em> </p>
 
 
 

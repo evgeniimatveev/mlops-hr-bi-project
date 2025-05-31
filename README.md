@@ -66,11 +66,11 @@ mlops_hr_bi_project/
 
 | Story Section              | PDF Link |
 |---------------------------|----------|
-| 📊 Employees per Department | [Story 1](https://github.com/yourname/project/blob/main/tableau/Story1.pdf) |
-| 💼 Employees per Position   | [Story 2](https://github.com/yourname/project/blob/main/tableau/Story2.pdf) |
-| 💰 Avg Salary by Department | [Story 3](https://github.com/yourname/project/blob/main/tableau/Story3.pdf) |
-| 🧠 Who Earns More?          | [Story 4](https://github.com/yourname/project/blob/main/tableau/Story4.pdf) |
-| 📈 Hiring Trend             | [Story 5](https://github.com/yourname/project/blob/main/tableau/Story5.pdf) |
+| 📊 Employees per Department | [Story 1](https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/screenshots/Story%201.pdf) |
+| 💼 Employees per Position   | [Story 2](https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/screenshots/Story%202.pdf) |
+| 💰 Avg Salary by Department | [Story 3](https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/screenshots/Story%203.pdf) |
+| 🧠 Who Earns More?          | [Story 4](https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/screenshots/Story%204.pdf) |
+| 📈 Hiring Trend             | [Story 5](https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/screenshots/Story%205.pdf) |
 
 
 

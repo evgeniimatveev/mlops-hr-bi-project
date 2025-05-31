@@ -76,15 +76,6 @@ mlops_hr_bi_project/
 
 Each story point is exported as a PDF for quick access or offline use.
 
-| Story Section             | PDF Link                                                                 |
-|---------------------------|---------------------------------------------------------------------------|
-| 📊 Employees per Department | [Story 1](https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/Story%201.pdf) |
-| 👤 Employees per Position   | [Story 2](https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/Story%202.pdf) |
-| 💰 Avg Salary by Department| [Story 3](https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/Story%203.pdf) |
-| 🏆 Who Earns More?         | [Story 4](https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/Story%204.pdf) |
-| 📈 Hiring Trend            | [Story 5](https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/Story%205.pdf) |
-
-
 
 🗂️ Downloadable Tableau Stories (PDFs)
 Every story point from the Tableau dashboard is exported as a standalone PDF.

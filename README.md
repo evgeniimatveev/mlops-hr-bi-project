@@ -18,9 +18,9 @@ It demonstrates an end-to-end analytics workflow:
 **PostgreSQL → SQL Views → Python Export → Tableau Dashboard → Storytelling**
 
 Designed for:
-- portfolio
-- interviews
-- real-world BI workflow demonstration
+- portfolio projects
+- technical interviews
+- demonstrating real-world BI & analytics workflows
 
 ---
 

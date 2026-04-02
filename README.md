@@ -129,6 +129,10 @@ python scripts/export_views.py
   <br><em>Interactive Tableau Story with hiring trends</em>
 </p>
 
+📸 Dashboard Preview
+<p align="center"> <img src="https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/screenshots/Dashboard.png?raw=true" width="900"/> <br><em>Main Tableau dashboard: workforce structure, role-level salary distribution, and departmental salary overview</em> </p>
+
+
 
 - 🪄 What’s Next?
 - ✔️ Finish Tableau dashboard & Story (1 file with all insights)

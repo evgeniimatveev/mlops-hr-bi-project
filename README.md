@@ -5,6 +5,8 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue?logo=postgresql&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-Automation-yellow?logo=python&logoColor=black)
 ![Tableau](https://img.shields.io/badge/Tableau-Visualization-orange?logo=tableau&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-Analytics-lightgrey?logo=postgresql)
+![Data Pipeline](https://img.shields.io/badge/Data%20Pipeline-ETL-blueviolet)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 
 ---
@@ -81,6 +83,12 @@ Designed for:
 
 ---
 
+## 🏗️ Architecture
+
+PostgreSQL → SQL Views → Python Export → CSV → Tableau → Story Dashboard
+
+---
+
 ## 📌 Example SQL
 
 ```sql
@@ -126,8 +134,8 @@ DB_USER=postgres
 DB_PASSWORD=your_password
 DB_HOST=localhost
 DB_PORT=5432
-```
 
+```
 ---
 
 ## 🚀 How to Run

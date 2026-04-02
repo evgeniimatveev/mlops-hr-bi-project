@@ -23,7 +23,9 @@ Designed for:
 - real-world BI workflow demonstration
 
 ---
+
 ## 🚀 TL;DR
+
 A portfolio-ready HR BI project that combines SQL analytics, Python automation, and Tableau storytelling into one end-to-end workflow.
 ## 📸 Dashboard Preview
 

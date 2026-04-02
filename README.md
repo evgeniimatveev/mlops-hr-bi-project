@@ -84,20 +84,38 @@ Designed for:
 ## 📌 Example SQL
 
 ```sql
-SELECT dept_name, AVG(salary) AS avg_salary
+-- Average salary by department
+SELECT 
+    dept_name,
+    ROUND(AVG(salary), 2) AS avg_salary
 FROM employee_full_info
-GROUP BY dept_name;
+GROUP BY dept_name
+ORDER BY avg_salary DESC;
 ```
+---
 
 ```sql
+-- Top 5 highest paid employees
 SELECT 
     emp_id,
     emp_name,
-    MAX(changed_at) AS last_changed_at
-FROM employee_salary_history
-GROUP BY emp_id, emp_name;
+    position_name,
+    salary
+FROM employee_full_info
+ORDER BY salary DESC
+LIMIT 5;
 ```
+---
 
+```sql
+-- Hiring trend over time (yearly)
+SELECT 
+    EXTRACT(YEAR FROM hire_date) AS hire_year,
+    COUNT(*) AS hires
+FROM employee_full_info
+GROUP BY hire_year
+ORDER BY hire_year;
+```
 ---
 
 ## 💾 Environment Setup

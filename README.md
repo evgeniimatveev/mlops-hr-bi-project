@@ -228,6 +228,7 @@ GROUP BY emp_id, emp_name;
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue?logo=postgresql&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-Automation-yellow?logo=python&logoColor=black)
 ![Tableau](https://img.shields.io/badge/Tableau-Visualization-orange?logo=tableau&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 
 ---

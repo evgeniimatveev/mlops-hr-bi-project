@@ -1,6 +1,5 @@
 
 
-
 # 🧠 HR BI Project — PostgreSQL + SQL + Tableau + Python Automation
 
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue?logo=postgresql&logoColor=white)
@@ -24,6 +23,7 @@ Designed for:
 - real-world BI workflow demonstration
 
 ---
+## 🚀 TL;DR
 A portfolio-ready HR BI project that combines SQL analytics, Python automation, and Tableau storytelling into one end-to-end workflow.
 ## 📸 Dashboard Preview
 

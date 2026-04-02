@@ -28,6 +28,18 @@ Designed for:
 
 > 💡 Built as a real-world BI pipeline to demonstrate SQL + automation + dashboard storytelling in a production-style structure.
 
+---
+
+## 🧩 Business Questions Answered
+
+- Which department has the largest workforce?
+- Which roles receive the highest salary investment?
+- Which department leads in average compensation?
+- How is salary distributed across roles?
+- How has hiring activity changed over time?
+
+---
+
 ## 📸 Dashboard Preview
 
 <p align="center">

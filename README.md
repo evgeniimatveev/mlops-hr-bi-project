@@ -122,25 +122,99 @@ conda activate mlops_hr_bi_env
 
 python scripts/export_views.py
 ```
-📸 Dashboard Preview
 
-<p align="center">
-  <img src="https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/screenshots/Dashboard%201.png?raw=true" width="600"/>
-  <br><em>Interactive Tableau Story with hiring trends</em>
-</p>
 
 📸 Dashboard Preview
 <p align="center"> <img src="https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/screenshots/Dashboard.png?raw=true" width="900"/> <br><em>Main Tableau dashboard: workforce structure, role-level salary distribution, and departmental salary overview</em> </p>
 
 
+---
 
-- 🪄 What’s Next?
-- ✔️ Finish Tableau dashboard & Story (1 file with all insights)
-- 📎 Export as PDF & screenshots for resume & LinkedIn
-- 📌 Add storytelling section + links once live
+## 📘 Tableau Assets
 
-- ⭐ Give the repo a star if you'd use this as a template for BI storytelling projects
+### 🔗 Workbook
+- 📂 [Download Tableau Workbook (.twbx)](https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/hr_workforce_analysis.twbx)
 
+### 📄 Story Exports
+- 📊 [Workforce Distribution by Department](https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/screenshots/Workforce_Distribution_by_Department.pdf)
+- 💼 [Salary Distribution by Role](https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/screenshots/Salary_Distribution_by_Role.pdf)
+- 💰 [Average Salary by Department](https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/screenshots/Average_Salary_by_Department.pdf)
+- 🧠 [Salary Comparison Across Roles](https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/screenshots/Salary_Comparison_Across_Roles.pdf)
+- 📈 [Hiring Trend Over Time](https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/screenshots/Hiring_Trend_Over_Time.pdf)
+
+---
+
+## 🧩 Business Questions Answered
+
+This project explores key HR and workforce analytics questions:
+
+- 📊 Which department has the largest workforce?
+- 💰 Which roles receive the highest salary investment?
+- 🧠 Which department leads in average compensation?
+- ⚖️ Are salaries evenly distributed across roles?
+- 📈 How has hiring activity evolved over time?
+
+---
+
+## 🔍 Key Insights
+
+### 1️⃣ Workforce Distribution by Department
+- Marketing has the largest team → strong focus on growth and brand expansion  
+- Engineering, Finance, and HR maintain balanced team sizes  
+- Sales has the smallest headcount → possibly efficiency-driven  
+
+---
+
+### 2️⃣ Salary Distribution by Role
+- Marketing Analyst and DevOps Engineer lead in total salary spend  
+- Indicates investment in both **technical** and **growth-oriented roles**
+
+---
+
+### 3️⃣ Average Salary by Department
+- Engineering ranks highest in average salary  
+- Marketing follows closely  
+- Suggests strong demand for **technical + creative skill sets**
+
+---
+
+### 4️⃣ Salary Comparison Across Roles
+- Salary distribution is **not uniform**
+- High-impact roles receive significantly higher compensation  
+- Reflects performance-driven compensation strategy  
+
+---
+
+### 5️⃣ Hiring Trend Over Time
+- Peak hiring observed in **2020–2021**
+- Followed by stabilization period  
+- Indicates shift from **rapid scaling → operational optimization**
+
+---
+
+## ⚙️ How It Works
+
+- 🛢️ SQL scripts → create schema + analytical views  
+- 🐍 Python → exports views into `.csv`  
+- 📊 Tableau → builds dashboards & story insights  
+- 🌐 GitHub → hosts full project + presentation layer  
+
+---
+
+## 📌 Example SQL Logic
+
+```sql
+-- Average salary by department
+SELECT dept_name, AVG(salary) AS avg_salary
+FROM employee_full_info
+GROUP BY dept_name;
+```
+```sql
+-- Latest salary change by employee
+SELECT emp_id, emp_name, MAX(changed_at) AS last_changed_at
+FROM employee_salary_history
+GROUP BY emp_id, emp_name;
+```
 
 ## 📢 Stay Connected!  
 💻 **GitHub Repository:** [Evgenii Matveev](https://github.com/evgeniimatveev)  

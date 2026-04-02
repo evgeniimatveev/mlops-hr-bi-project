@@ -59,7 +59,7 @@ mlops_hr_bi_project/
 │   └── export_views.py
 │
 └── tableau/
-    ├── hr_workforce_analysis_final.twbx
+    ├── hr_workforce_analysis.twbx
     └── screenshots/
         ├── story_overview.png
         └── trends.png

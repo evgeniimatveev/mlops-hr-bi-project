@@ -6,7 +6,6 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue?logo=postgresql&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-Automation-yellow?logo=python&logoColor=black)
 ![Tableau](https://img.shields.io/badge/Tableau-Visualization-orange?logo=tableau&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 
 ---
@@ -15,7 +14,7 @@
 
 This project is a **Business Intelligence (BI) showcase** built on HR data.
 
-It demonstrates a full pipeline:
+It demonstrates an end-to-end analytics workflow:
 
 **PostgreSQL → SQL Views → Python Export → Tableau Dashboard → Storytelling**
 
@@ -25,7 +24,7 @@ Designed for:
 - real-world BI workflow demonstration
 
 ---
-
+A portfolio-ready HR BI project that combines SQL analytics, Python automation, and Tableau storytelling into one end-to-end workflow.
 ## 📸 Dashboard Preview
 
 <p align="center">
@@ -76,7 +75,10 @@ GROUP BY dept_name;
 ```
 
 ```sql
-SELECT emp_id, emp_name, MAX(changed_at)
+SELECT 
+    emp_id,
+    emp_name,
+    MAX(changed_at) AS last_changed_at
 FROM employee_salary_history
 GROUP BY emp_id, emp_name;
 ```
@@ -146,8 +148,8 @@ This repository can be used as a **template for**:
 
 ## 📢 Connect
 
-- 💻 GitHub: https://github.com/evgeniimatveev  
-- 🌐 Portfolio: https://www.datascienceportfol.io/evgeniimatveevusa  
-- 📌 LinkedIn: https://www.linkedin.com/in/evgenii-matveev-510926276/  
+- 💻 GitHub: [evgeniimatveev](https://github.com/evgeniimatveev)
+- 🌐 Portfolio: [Data Science Portfolio](https://www.datascienceportfol.io/evgeniimatveevusa)
+- 📌 LinkedIn: [Evgenii Matveev](https://www.linkedin.com/in/evgenii-matveev-510926276/)
 
 ---

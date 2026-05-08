@@ -22,7 +22,7 @@ Analyzed HR data for **30 employees across 5 departments** (Engineering, Sales, 
 ## Dashboard Preview
 
 <p align="center">
-  <img src="https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/screenshots/Dashboard.png?raw=true" width="900"/>
+  <img src="https://github.com/evgeniimatveev/hr-bi-analytics-project/blob/main/tableau/screenshots/Dashboard.png?raw=true" width="900"/>
 </p>
 
 ---
@@ -132,11 +132,11 @@ mlops_hr_bi_project/
 
 | Story | Link |
 |-------|------|
-| Workforce Distribution | [Story 1 PDF](https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/screenshots/Workforce_Distribution_by_Department.pdf) |
-| Salary by Role | [Story 2 PDF](https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/screenshots/Salary_Distribution_by_Role.pdf) |
-| Avg Salary by Dept | [Story 3 PDF](https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/screenshots/Average_Salary_by_Department.pdf) |
-| Salary Comparison | [Story 4 PDF](https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/screenshots/Salary_Comparison_Across_Roles.pdf) |
-| Hiring Trend | [Story 5 PDF](https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/screenshots/Hiring_Trend_Over_Time.pdf) |
+| Workforce Distribution | [Story 1 PDF](https://github.com/evgeniimatveev/hr-bi-analytics-project/blob/main/tableau/screenshots/Workforce_Distribution_by_Department.pdf) |
+| Salary by Role | [Story 2 PDF](https://github.com/evgeniimatveev/hr-bi-analytics-project/blob/main/tableau/screenshots/Salary_Distribution_by_Role.pdf) |
+| Avg Salary by Dept | [Story 3 PDF](https://github.com/evgeniimatveev/hr-bi-analytics-project/blob/main/tableau/screenshots/Average_Salary_by_Department.pdf) |
+| Salary Comparison | [Story 4 PDF](https://github.com/evgeniimatveev/hr-bi-analytics-project/blob/main/tableau/screenshots/Salary_Comparison_Across_Roles.pdf) |
+| Hiring Trend | [Story 5 PDF](https://github.com/evgeniimatveev/hr-bi-analytics-project/blob/main/tableau/screenshots/Hiring_Trend_Over_Time.pdf) |
 
 ---
 

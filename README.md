@@ -1,48 +1,25 @@
-
-
-# 🧠 HR BI Project — PostgreSQL + SQL + Tableau + Python Automation
+# HR BI Analytics — PostgreSQL · SQL · Python · Tableau
 
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue?logo=postgresql&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-Automation-yellow?logo=python&logoColor=black)
 ![Tableau](https://img.shields.io/badge/Tableau-Visualization-orange?logo=tableau&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-Analytics-lightgrey?logo=postgresql)
-![Data Pipeline](https://img.shields.io/badge/Data%20Pipeline-ETL-blueviolet)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 
 ---
 
-## 📊 Project Overview
+## What This Project Does
 
-This project is a **Business Intelligence (BI) showcase** built on HR data.
+Analyzed HR data for **30 employees across 5 departments** (Engineering, Sales, Finance, Marketing, HR) to surface compensation inequities and hiring trends for strategic workforce decisions.
 
-It demonstrates an end-to-end analytics workflow:
+**Key finding:** Sales department leads in average salary ($102K) — 17% above the company average of $87K — while Marketing carries the largest headcount (23% of workforce).
 
-**PostgreSQL → SQL Views → Python Export → Tableau Dashboard → Storytelling**
-
-Designed for:
-- portfolio projects
-- technical interviews
-- demonstrating real-world BI & analytics workflows
+**Pipeline:** `PostgreSQL → SQL Views → Python Export → Tableau Dashboard`
 
 ---
 
-## 🚀 TL;DR
-
-> 💡 Built as a real-world BI pipeline to demonstrate SQL + automation + dashboard storytelling in a production-style structure.
-
----
-
-## 🧩 Business Questions Answered
-
-- Which department has the largest workforce?
-- Which roles receive the highest salary investment?
-- Which department leads in average compensation?
-- How is salary distributed across roles?
-- How has hiring activity changed over time?
-
----
-
-## 📸 Dashboard Preview
+## Dashboard Preview
 
 <p align="center">
   <img src="https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/screenshots/Dashboard.png?raw=true" width="900"/>
@@ -50,153 +27,159 @@ Designed for:
 
 ---
 
-## 📘 Tableau Assets
+## Business Questions & Findings
 
-### 🔗 Workbook
-- 📂 [Download Tableau Workbook (.twbx)](https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/hr_workforce_analysis.twbx)
-
-### 📄 Story Exports
-- 📊 [Workforce Distribution](https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/screenshots/Workforce_Distribution_by_Department.pdf)
-- 💼 [Salary Distribution](https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/screenshots/Salary_Distribution_by_Role.pdf)
-- 💰 [Avg Salary](https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/screenshots/Average_Salary_by_Department.pdf)
-- 🧠 [Salary Comparison](https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/screenshots/Salary_Comparison_Across_Roles.pdf)
-- 📈 [Hiring Trend](https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/screenshots/Hiring_Trend_Over_Time.pdf)
+| Question | Finding |
+|----------|---------|
+| Which department has the largest workforce? | Marketing — 7 employees (23% of headcount) |
+| Which department leads in average salary? | Sales — $102,400 avg |
+| What is the salary spread? | $58K (min) → $135K (max), range = $77K |
+| When did hiring peak? | 2019–2020 — highest intake years |
+| Which roles dominate salary budget? | DevOps Engineers + Sales Reps = largest salary investment |
 
 ---
 
-## 🔍 Key Insights
+## SQL — Advanced Patterns
 
-- 📊 Marketing has the largest workforce → growth-focused strategy  
-- 💰 Engineering leads in average salary → high technical demand  
-- 🧠 Salary distribution is not uniform → high-impact roles dominate  
-- ⚙️ Investment concentrated in **DevOps + Marketing roles**  
-- 📈 Hiring peaked in 2020–2021 → shift from scaling to stabilization  
-
----
-
-## ⚙️ How It Works
-
-- 🛢️ SQL → builds analytical views  
-- 🐍 Python → exports views into `.csv`  
-- 📊 Tableau → creates dashboards & story  
-- 🌐 GitHub → hosts full BI pipeline  
-
----
-
-## 🏗️ Architecture
-
-PostgreSQL → SQL Views → Python Export → CSV → Tableau → Story Dashboard
-
----
-
-## 📌 Example SQL
+### Window Function: Salary Rank Within Department
 
 ```sql
--- Average salary by department
-SELECT 
+SELECT
+    emp_name,
     dept_name,
-    ROUND(AVG(salary), 2) AS avg_salary
+    salary,
+    RANK() OVER (PARTITION BY dept_name ORDER BY salary DESC) AS salary_rank,
+    ROUND(salary - AVG(salary) OVER (PARTITION BY dept_name), 0) AS vs_dept_avg
+FROM employee_full_info
+ORDER BY dept_name, salary_rank;
+```
+
+### CTE: Salary Deviation by Employee
+
+```sql
+WITH dept_stats AS (
+    SELECT
+        dept_name,
+        ROUND(AVG(salary), 0) AS dept_avg
+    FROM employee_full_info
+    GROUP BY dept_name
+)
+SELECT
+    e.emp_name,
+    e.dept_name,
+    e.salary,
+    d.dept_avg,
+    ROUND((e.salary - d.dept_avg) / d.dept_avg * 100, 1) AS pct_vs_dept_avg
+FROM employee_full_info e
+JOIN dept_stats d USING (dept_name)
+ORDER BY pct_vs_dept_avg DESC;
+```
+
+### Aggregate: Department Summary
+
+```sql
+SELECT
+    dept_name,
+    COUNT(*)                   AS headcount,
+    ROUND(AVG(salary), 0)     AS avg_salary,
+    MIN(salary)               AS min_salary,
+    MAX(salary)               AS max_salary
 FROM employee_full_info
 GROUP BY dept_name
 ORDER BY avg_salary DESC;
 ```
+
 ---
 
-```sql
--- Top 5 highest paid employees
-SELECT 
-    emp_id,
-    emp_name,
-    position_name,
-    salary
-FROM employee_full_info
-ORDER BY salary DESC
-LIMIT 5;
+## Architecture
+
 ```
----
-
-```sql
--- Hiring trend over time (yearly)
-SELECT 
-    EXTRACT(YEAR FROM hire_date) AS hire_year,
-    COUNT(*) AS hires
-FROM employee_full_info
-GROUP BY hire_year
-ORDER BY hire_year;
+PostgreSQL (source)
+    └── SQL Views (analytical layer)
+            └── Python export_views.py (automation)
+                    └── CSV files (data/*)
+                            └── Tableau Dashboard (storytelling)
 ```
+
 ---
 
-## 💾 Environment Setup
+## Project Structure
+
+```
+mlops_hr_bi_project/
+├── README.md
+├── .env.example
+├── requirements.txt
+├── data/                    # exported CSV views
+│   ├── employee_full_info_*.csv
+│   ├── avg_salary_by_department_*.csv
+│   ├── count_by_position_*.csv
+│   └── salary_trends_*.csv
+├── sql/
+│   ├── ddl/                 # schema & views
+│   ├── dml/                 # data inserts
+│   └── dql/                 # analysis queries
+├── scripts/
+│   └── export_views.py
+└── tableau/
+    ├── dashboard.twbx
+    └── screenshots/
+```
+
+---
+
+## Tableau Assets
+
+| Story | Link |
+|-------|------|
+| Workforce Distribution | [Story 1 PDF](https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/screenshots/Workforce_Distribution_by_Department.pdf) |
+| Salary by Role | [Story 2 PDF](https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/screenshots/Salary_Distribution_by_Role.pdf) |
+| Avg Salary by Dept | [Story 3 PDF](https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/screenshots/Average_Salary_by_Department.pdf) |
+| Salary Comparison | [Story 4 PDF](https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/screenshots/Salary_Comparison_Across_Roles.pdf) |
+| Hiring Trend | [Story 5 PDF](https://github.com/evgeniimatveev/mlops-hr-bi-project/blob/main/tableau/screenshots/Hiring_Trend_Over_Time.pdf) |
+
+---
+
+## How to Run
 
 ```bash
+# 1. Configure environment
+cp .env.example .env
+# Edit .env with your PostgreSQL credentials
+
+# 2. Activate environment and export views
+conda activate mlops_hr_bi_env
+python scripts/export_views.py
+
+# 3. Open Tableau workbook
+# tableau/dashboard.twbx
+```
+
+**.env example:**
+```
 DB_NAME=hr_bi
 DB_USER=postgres
 DB_PASSWORD=your_password
 DB_HOST=localhost
 DB_PORT=5432
-
-```
----
-
-## 🚀 How to Run
-
-```bash
-conda activate mlops_hr_bi_env
-python scripts/export_views.py
 ```
 
 ---
 
-## 🎯 Why This Project Matters
+## Stack
 
-This project demonstrates a **complete BI workflow**:
-
-- 🏗️ Database design (PostgreSQL)  
-- 🧠 SQL analytics  
-- 🐍 Python automation  
-- 📊 Tableau visualization  
-- 🌐 Portfolio-ready presentation  
-
-### 💼 Target Roles
-
-- Data Analyst  
-- BI Analyst  
-- Analytics Engineer  
-- Junior Data Engineer  
-- Entry-Level MLOps / Automation  
+| Layer | Technology |
+|-------|-----------|
+| Database | PostgreSQL |
+| Analytics | SQL (Views, CTEs, Window Functions) |
+| Automation | Python (psycopg2, pandas) |
+| Visualization | Tableau |
+| Version Control | Git / GitHub |
 
 ---
 
-## 🪄 Future Improvements
+## Connect
 
-- 📊 Add HR KPIs (attrition, tenure)  
-- 🔌 Connect Tableau to live database  
-- ⏱️ Automate scheduled exports  
-- 🎛️ Improve dashboard interactivity  
-
----
-
-## ⭐ Repository Value
-
-This repository can be used as a **template for**:
-
-- SQL + BI projects  
-- Tableau portfolio  
-- Data storytelling  
-- End-to-end analytics pipelines  
-
----
-
-## 📢 Connect
-
-- 💻 GitHub: [evgeniimatveev](https://github.com/evgeniimatveev)
-- 🌐 Portfolio: [Data Science Portfolio](https://www.datascienceportfol.io/evgeniimatveevusa)
-- 📌 LinkedIn: [Evgenii Matveev](https://www.linkedin.com/in/evgenii-matveev-510926276/)
-
----
-
-  - GitHub: evgeniimatveev (https://github.com/evgeniimatveev)
-  - Portfolio: datascienceportfol.io/evgeniimatveevusa (https://www.datascienceportfol.io/evgeniimatveevusa)
-  - LinkedIn: Evgenii Matveev (https://www.linkedin.com/in/evgenii-matveev-510926276/)
-
-  </details>
+- GitHub: [evgeniimatveev](https://github.com/evgeniimatveev)
+- Portfolio: [datascienceportfol.io/evgeniimatveevusa](https://www.datascienceportfol.io/evgeniimatveevusa)
+- LinkedIn: [Evgenii Matveev](https://www.linkedin.com/in/evgenii-matveev-510926276/)
